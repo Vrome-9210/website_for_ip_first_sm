@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Персонажи - GeneralEFT</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
+    <body>
+        <header class="all-header">
+            <div class="header-content">
+                <h1><i class="fas fa-images"></i> Персонажи</h1>
+                <p class="subtitle">Коллекция изображений по теме: <span class="theme-name">Персонжи Escape from Tarkov</span></p>
+            </div>
+            
+            <nav class="main-nav">
+                <ul class="nav-grid">
+                    <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="characters.html" class="nav-link active"><i class="fas fa-camera"></i> Персонажи</a></li>
+                    <li><a href="contacts.html" class="nav-link"><i class="fas fa-info-circle"></i> Контакты</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="gallery-container">
+            <div class="controls-panel">
+                <div class="stats">
+                    <span class="stat-item">
+                        <i class="fas fa-image"></i>
+                        Изображений: <span id="image-counter">0</span>
+                    </span>
+                    <span class="stat-item">
+                        <i class="fas fa-heart"></i>
+                        Всего лайков: <span id="total-likes">0</span>
+                    </span>
+                </div>
+                
+                <div class="view-controls">
+                    <button id="grid-view" class="view-btn active">
+                        <i class="fas fa-th"></i> Сетка
+                    </button>
+                    <button id="list-view" class="view-btn">
+                        <i class="fas fa-list"></i> Список
+                    </button>
+                </div>
+            </div>
+            
+            <div class="filters"> <!-- фильтры-->
+                <h3><i class="fas fa-filter"></i> Фильтры:</h3>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Все</button>
+                    <button class="filter-btn" data-filter="traders">Торговцы</button>
+                    <button class="filter-btn" data-filter="boss">Боссы</button>
+                    <button class="filter-btn" data-filter="PMCscavs">Чвк и дикие</button>
+                </div>
+            </div>
+
+            <div class="gallery-grid" id="image-gallery"> <!-- див открывающий карты-->
+                
+                <article class="image-card" data-category="traders"> <!-- первая карта (прапор)-->
+                    <div class="card-image">
+                        <img src="assets/image/127px-Prapor_portret.webp"
+                            alt="Портрет Прапора"
+                            class="gallery-img"
+                            loading="lazy">
+                        <div class="image-overlay">
+                            <button class="like-btn" data-id="1">
+                                <i class="far fa-heart"></i>
+                                <span class="like-count">0</span>
+                            </button>
+                            <button class="zoom-btn">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="image-title">Прапор</h3>
+                        <p class="image-date"><i class="far fa-calendar"></i> 28 августа 2024</p>
+                        <p class="image-description">Прапорщик на складах тыловой базы снабжения Внутренних войск, заблокировавших Норвинскую область. В период Контрактных Войн снабжал из под полы ЧВК BEAR вооружением, боеприпасами и прочим доступным имуществом. </p>
+                        <div class="image-tags">
+                            <span class="tag">Торговец</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="image-card" data-category="traders"> <!-- вторая карта (терапевт)-->
+                    <div class="card-image">
+                        <img src="assets/image/127px-Terapevt_portret.webp"
+                            alt="Портрет Терапевта"
+                            class="gallery-img"
+                            loading="lazy">
+                        <div class="image-overlay">
+                            <button class="like-btn" data-id="2">
+                                <i class="far fa-heart"></i>
+                                <span class="like-count">0</span>
+                            </button>
+                            <button class="zoom-btn">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="image-title">Терапевт</h3>
+                        <p class="image-date"><i class="far fa-calendar"></i> 25 марта 2024</p>
+                        <p class="image-description">Заведующая отделением травматологии Центральной городской больницы города Таркова.</p>
+                        <div class="image-tags">
+                            <span class="tag">Торговец</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="image-card" data-category="traders"> <!-- третья карта (Скупщик)-->
+                    <div class="card-image">
+                        <img src="assets/image/127px-Skupshik_portret.webp"
+                            alt="Портрет Скупщика"
+                            class="gallery-img"
+                            loading="lazy">
+                        <div class="image-overlay">
+                            <button class="like-btn" data-id="3">
+                                <i class="far fa-heart"></i>
+                                <span class="like-count">0</span>
+                            </button>
+                            <button class="zoom-btn">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="image-title">Скупщик</h3>
+                        <p class="image-date"><i class="far fa-calendar"></i> 25 марта 2024</p>
+                        <p class="image-description">С самого зарождения конфликта Скупщик уже начинал действовать, организуя анонимные точки приёма и сбыта товара. Оставаясь инкогнито, смог организовать отлаженную сеть контрабандистов по всей Норвинской области. </p>
+                        <div class="image-tags">
+                            <span class="tag">Торговец</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="image-card" data-category="traders"> <!-- четвёртая карта (Лыжник)-->
+                    <div class="card-image">
+                        <img src="assets/image/127px-Lijnik_portret.webp"
+                            alt="Портрет Лыжника"
+                            class="gallery-img"
+                            loading="lazy">
+                        <div class="image-overlay">
+                            <button class="like-btn" data-id="4">
+                                <i class="far fa-heart"></i>
+                                <span class="like-count">0</span>
+                            </button>
+                            <button class="zoom-btn">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="image-title">Лыжник</h3>
+                        <p class="image-date"><i class="far fa-calendar"></i> 25 марта 2024</p>
+                        <p class="image-description">Сотрудник таможенного терминала предпортовой зоны. Изначально приторговывал товарами терминала, а в ходе конфликта сколотил банду и начал стаскивать к терминалу всё, что плохо лежит в округе. Поговаривают что у него существует некая связь с Егерем и является фуфлыжником</p>
+                        <div class="image-tags">
+                            <span class="tag">Торговец</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="image-card" data-category="traders"> <!-- пятая карта (Миротворец)-->
+                    <div class="card-image">
+                        <img src="assets/image/127px-Mirotvorec_portret.webp"
+                            alt="Портрет Миротворца"
+                            class="gallery-img"
+                            loading="lazy">
+                        <div class="image-overlay">
+                            <button class="like-btn" data-id="5">
+                                <i class="far fa-heart"></i>
+                                <span class="like-count">0</span>
+                            </button>
+                            <button class="zoom-btn">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="image-title">Миротворец</h3>
+                        <p class="image-date"><i class="far fa-calendar"></i> 25 марта 2024</p>
+                        <p class="image-description">Снабженец из контингента ООН. Сидит на одном из центральных блок-постов в предпортовой зоне Таркова. "Голубые" с самого начала конфликта мутили свой мелкий бизнес, скупая всё мало-мальски ценное на вывоз и сливая местным западное оружие, боеприпасы и кое-что из военного оборудования. </p>
+                        <div class="image-tags">
+                            <span class="tag">Торговец</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="image-card" data-category="traders"> <!-- шестая карта (Механик)-->
+                    <div class="card-image">
+                        <img src="assets/image/127px-Mechanic_portret.webp"
+                            alt="Портрет Механика"
+                            class="gallery-img"
+                            loading="lazy">
+                        <div class="image-overlay">
+                            <button class="like-btn" data-id="6">
+                                <i class="far fa-heart"></i>
+                                <span class="like-count">0</span>
+                            </button>
+                            <button class="zoom-btn">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="image-title">Механик</h3>
+                        <p class="image-date"><i class="far fa-calendar"></i> 25 марта 2024</p>
+                        <p class="image-description">Бывший мастер Химкомбината. С самого начала работает по теме оружейных модификаций и ремонта сложного оборудования. Предпочитает работать скрытно и в одиночку, ставит интересные и сложные задачи превыше всего.</p>
+                        <div class="image-tags">
+                            <span class="tag">Торговец</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="image-card" data-category="traders"> <!-- седьмая карта (Барахольщик)-->
+                    <div class="card-image">
+                        <img src="assets/image/127px-Baraholshik_portret.webp"
+                            alt="Портрет Барахольщика"
+                            class="gallery-img"
+                            loading="lazy">
+                        <div class="image-overlay">
+                            <button class="like-btn" data-id="7">
+                                <i class="far fa-heart"></i>
+                                <span class="like-count">0</span>
+                            </button>
+                            <button class="zoom-btn">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="image-title">Барахольщик</h3>
+                        <p class="image-date"><i class="far fa-calendar"></i> 25 марта 2024</p>
+                        <p class="image-description">Он работал директором на большом рынке, расположенном в пригороде Таркова. Продает все, что связано с одеждой и снаряжением. </p>
+                        <div class="image-tags">
+                            <span class="tag">Торговец</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="image-card" data-category="traders"> <!-- восьмая карта (Егерь)-->
+                    <div class="card-image">
+                        <img src="assets/image/127px-Eger_portret.webp"
+                            alt="Портрет Егеря"
+                            class="gallery-img"
+                            loading="lazy">
+                        <div class="image-overlay">
+                            <button class="like-btn" data-id="8">
+                                <i class="far fa-heart"></i>
+                                <span class="like-count">0</span>
+                            </button>
+                            <button class="zoom-btn">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="image-title">Егерь</h3>
+                        <p class="image-date"><i class="far fa-calendar"></i> 25 марта 2024</p>
+                        <p class="image-description">Работал в лесном охотничьем хозяйстве Приозерского заповедника. Самая страшная тварь которую можно встретить в лесу. Охотник-профессионал и специалист по выживанию, охранял и охраняет, свой егерский обход от разного рода агрессивных особей, возможно попутно открывает двери в преисподнию. (возможно поехавший)</p>
+                        <div class="image-tags">
+                            <span class="tag">Торговец</span>
+                        </div>
+                    </div>
+                </article>
+            </div> <!-- див закрывающий карты-->
+            
+            <aside class="gallery-info">
+                <h3><i class="fas fa-lightbulb"></i> Интересный факт</h3>
+                <p>Все торговцы так или иначе выдают квесты, сюжетные и не очень. Егерь может выдать квест из преисподнии лично.</p>
+            </aside>
+        </main>
+
+        <footer class="gallery-footer">
+            <div class="footer-content">
+                <p>&copy; <span id="current-year">2026</span> Emorv. Все права защищены.</p>
+                <p class="js-status">JavaScript загружен и работает!</p>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+        
+    </body>
+</html>
